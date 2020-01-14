@@ -19,31 +19,31 @@
         <h1 class="pl-3">Gould</h1>
     </div>
     <div class="row">
-        <div class="col border border-dark rounded m-2">
+        <div id="column-1" class="col border border-dark rounded m-2">
+            <h3>Column 1</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
+            <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p>
+        </div>
+        <div id="column-2" class="col border border-dark rounded m-2">
             <h3>Column 2</h3>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
             <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p>
         </div>
-        <div class="col border border-dark rounded m-2">
+        <div id="column-3" class="col border border-dark rounded m-2">
             <h3>Column 3</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
-            <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p>
-        </div>
-        <div class="col border border-dark rounded m-2">
-            <h3>Column 4</h3>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
             <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p>
         </div>
     </div>
 
     <div class="row">
-        <div class="col-8 border border-dark rounded m-2">
-            <h3>Column 5</h3>
+        <div id="column-4" class="col-8 border border-dark rounded m-2">
+            <h3>Column 4</h3>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
             <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p>
         </div>
-        <div class="col-3 border border-dark rounded m-2">
-            <h3>Column 6</h3>
+        <div  id="column-5" class="col-3 border border-dark rounded m-2">
+            <h3>Column 5</h3>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
             <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p>
         </div>
@@ -51,6 +51,18 @@
 
 </div>
 
+<script>
+
+    handleResize = () => {
+        var windowWidth = window.innerWidth;
+        var windowHeight = window.innerHeight;
+        var column1 = document.getElementById("column-1");
+        var column5 = document.getElementById("column-5");
+        column5.style.height = windowHeight - column1.style.height - 200 + "px";
+    }
+    window.addEventListener("load", handleResize);
+    window.addEventListener("resize",handleResize);
+</script>
 
 <!-- Optional JavaScript -->
 <!-- jQuery first, then Popper.js, then Bootstrap JS -->
